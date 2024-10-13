@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin-left: 30px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #ff1493;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.home {
+    background: url('https://picsum.photos/1600/900') no-repeat center center/cover;
+    color: white;
+}
+
+.home .content h1 {
+    font-size: 48px;
+    animation: fadeIn 2s ease-in;
+}
+
+.home .scroll-down {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    margin-top: 20px;
+    display: inline-block;
+    animation: bounce 2s infinite;
+}
+
+.about {
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.parallax {
+    background: url('https://picsum.photos/1600/900?grayscale') no-repeat center;
+    height: 400px;
+    margin-top: 30px;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.gallery {
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.grid-item {
+    width: 200px;
+    height: 200px;
+    background: url('https://picsum.photos/200/200') no-repeat center/cover;
+    transition: transform 0.4s ease;
+}
+
+.grid-item:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact form input, 
+.contact form textarea {
+    padding: 10px;
+    border: none;
+    background-color: #f0f0f0;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.contact form button {
+    background-color: #ff1493;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 320px;
+}
+
+.contact form button:hover {
+    background-color: #e01170;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
